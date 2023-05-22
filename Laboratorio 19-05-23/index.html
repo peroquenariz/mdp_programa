@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3 - Formulario</title>
+</head>
+<body>
+    <form action="#">
+        <label for="firstname">Nombre</label>
+        <input id="firstname" type="text" placeholder="Juan" required>
+        <br>
+        <label for="lastname">Apellido</label>
+        <input id="lastname" type="text" placeholder="Pérez" required>
+        <br>
+        <label for="country">País</label>
+        <input id="country" type="text" placeholder="Argentina" required>
+        <br>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="ejemplo@mail.com" required>
+        <br>
+        <label>Género</label>
+        <input type="radio" name="gender" checked> Masculino
+        <input type="radio" name="gender"> Femenino
+        <br>
+        <label for="address">Dirección</label>
+        <textarea name="address" id="address" cols="30" rows="3" required></textarea>
+
+
+        <br>
+        <button type="reset">Limpiar</button>
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+</html>
