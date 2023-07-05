@@ -1,0 +1,69 @@
+.grid {
+    display: grid;
+    /*grid (en bloque) o inline-grid (en línea)*/
+    /*fr: unidad de fracción restante*/
+    /* 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr; */
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background-color: beige;
+    /* gap: columna, fila; */
+    gap: 20px 20px;
+    /* 
+    column-gap: 20px;
+    row-gap: 20px;
+    
+    justify-items: center;
+    justify-content: center;
+    align-content: center; 
+    */
+
+    /*un solo valor = igual para ambos!
+    place-items: center start; /*combina align-items + justify-items
+    place-content: center; /*combina align-content + justify-content
+    place-self: center; /*combina align-self + justify-self SOLO EN ITEMS*/
+}
+
+.grid .item {
+    background-color: lightblue;
+    padding: 20px 0px;
+    border: 1px solid black;
+}
+
+.grid-container {
+    display: grid;
+    background-color: beige;
+    gap: 1px;
+    padding: 10px;
+    grid-template-areas: 'area1 area1 area2'
+                         'area1 area1 area3';
+}
+
+.grid-container div {
+    background-color: lightseagreen;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 30px;
+}
+
+.item1{
+    grid-area: area1;
+    height: 100vh;
+}
+
+.item2{
+    grid-area: area2;
+}
+
+.item3{
+    grid-area: area3;
+}
+
+.grid .item-uno{
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1 / 3;
+    /* grid-column: 1 / span 3; para que ocupe lo correspondiente, similar a 1 / 4*/ 
+}

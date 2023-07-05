@@ -1,0 +1,78 @@
+body {
+    border: 3px solid #b66d00;
+    border-radius: 12px;
+}
+
+.grid {
+    display: grid;
+    /*grid (en bloque) o inline-grid (en línea)*/
+    /*fr: unidad de fracción restante*/
+    /* 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr; */
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background-color: beige;
+    /* gap: columna, fila; */
+    gap: 20px 20px;
+    /* 
+    column-gap: 20px;
+    row-gap: 20px;
+    
+    justify-items: center;
+    justify-content: center;
+    align-content: center; 
+    */
+
+    /*un solo valor = igual para ambos!
+    place-items: center start; /*combina align-items + justify-items
+    place-content: center; /*combina align-content + justify-content
+    place-self: center; /*combina align-self + justify-self SOLO EN ITEMS*/
+}
+
+.grid-container {
+    display: grid;
+    background-color: #ffcc7f;
+    gap: 1px;
+    padding: 0px;
+    border-radius: 10px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 40vh 20vh 20vh;
+}
+
+.grid-container div {
+    background-color: #ffb84e;
+    padding: 25px;
+    border: 3px solid #ff9900;
+    border-radius: 10px;
+}
+
+.grid-container .item1 {
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+
+
+    /* grid-column: 1 / span 3; para que ocupe lo correspondiente, similar a 1 / 4*/
+}
+
+.grid-container .item1 div{
+    padding: 10px;
+}
+
+.item {
+    color: #ff5e00;
+    font-size: 30px;
+}
+
+.subitem {
+    background-color: #fff3b1 !important;
+    border: 2px solid yellow !important;
+    margin: 1px;
+    height: 25%;
+}
+
+.grid-container .item2 {
+    grid-row: 2 / 4;
+}
