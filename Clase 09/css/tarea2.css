@@ -1,0 +1,26 @@
+main div{
+    position: absolute;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+}
+
+.blue{
+    background-color: blue;
+    z-index: 1;
+    left: 20px;
+}
+
+.yellow{
+    background-color: yellow;
+    z-index: 2;
+    left: 40px;
+}
+
+.red{
+    background-color: red;
+    z-index: 3;
+    left: 60px;
+}
