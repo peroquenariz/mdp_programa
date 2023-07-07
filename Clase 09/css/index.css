@@ -1,0 +1,71 @@
+form{
+    width: 500px;
+    border: 2px solid black;
+    z-index: 2; /*z-index va con las opciones de position*/
+    padding-top: 20vh;
+}
+
+.input {
+    position: relative;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: none;
+    border: none;
+    border-bottom: 1px solid green;
+}
+
+input:focus{
+    border: none;
+    border-bottom: 3px solid darkblue;
+}
+
+::placeholder{
+    color: red;
+    opacity: 0.8;
+}
+
+input:invalid{
+    color: red;
+}
+
+input:required{
+    background-color:aquamarine;
+}
+
+.input-icons{
+    color:black;
+    position: absolute;
+    font-size: 20px;
+    bottom: 0;
+}
+
+.header {
+    width: 100%;
+    height: 20vh;
+    background-color: black;
+    position: fixed;
+    z-index: 3;
+}
+
+.separacion {
+    width: 100%;
+    height: 150vh;
+    
+}
+
+textarea{
+    width: 100%;
+    margin: 10px
+}
+
+button{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+
+}
