@@ -207,12 +207,9 @@ nav div {
 }
 
 .footer {
-    margin-top: 200px;
-    height: 20vh;
+    margin-top: 150px;
     width: 100%;
     background-color: rgb(108, 180, 108);
-    display: grid;
-    grid-template-rows: 1fr 1fr;
 }
 
 .footer .payment-methods {
