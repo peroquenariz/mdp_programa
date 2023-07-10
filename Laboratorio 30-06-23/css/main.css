@@ -1,3 +1,9 @@
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 nav div {
     background-color: lightgreen;
 }
@@ -20,33 +26,54 @@ nav div {
 .pictures {
     display: flex;
     flex-direction: row;
-    height: 50vh;
+    height: 70vh;
 }
 
 .main-left {
-    width: 40%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    border-radius: 10px;
+    height: 35px;
+    width: 90px;
+}
+
+.carousel,
+.carousel-inner {
+    height: 100%;
+    width: 100%;
 }
 
 .carousel-item {
-    height: 50vh;
-    max-height: 50vh;
+    height: 100%;
 }
 
 .carousel-item img {
-
-    object-fit: fill;
+    object-fit: cover;
+    height: 100%;
 }
 
 .gallery {
-    width: 60%;
+    width: 100%;
     background-color: aliceblue;
     display: grid;
-    grid-template-columns: repeat(3, 33.33%);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .gallery-pic {
     background-color: gray;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .gallery-pic img {
@@ -55,27 +82,38 @@ nav div {
     object-fit: cover;
 }
 
+.gallery-button {
+    position: absolute;
+    bottom: 10px;
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.gallery-pic:hover .gallery-button {
+    opacity: 1;
+}
+
 .store-features {
     display: flex;
     flex-direction: row;
-    height: 55vh;
 }
 
-.store-features div {
+.feature {
     display: flex;
     flex-direction: column;
-    justify-content: bottom;
     align-items: center;
-    width: 33.33%;
 }
 
 .feature img {
     padding: 20px;
-    width: 60%;
+    width: 200px;
     object-fit: scale-down;
 }
 
-.feature p {
+.feature-text {
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
@@ -84,26 +122,40 @@ nav div {
 .section-divider {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 78.5%;
     align-items: center;
     justify-content: center;
     margin-top: 80px;
+    position: relative;
 }
 
 .divider-line {
     background-color: lightgreen;
     height: 5px;
-    max-width: 20%;
+    max-width: 50%;
     width: 50%;
+    position: absolute;
+}
+
+.divider-line-left {
+    left: 0;
+    width: 100%;
+}
+
+.divider-line-right {
+    right: 0;
 }
 
 .divider-text {
+    position: relative;
+    z-index: 2;
     max-width: 40%;
     font-size: 24px;
     text-align: center;
     text-justify: center;
     font-weight: bold;
-    margin: 0px 20px 0px 20px;
+    background-color: white;
+    padding: 0px 20px 0px 20px;
 }
 
 .recent-products-container {
@@ -173,6 +225,7 @@ nav div {
 .footer .payment-methods img {
     height: 100px;
     padding: 15px;
+    width: 100px;
 }
 
 .info-text {
@@ -186,8 +239,36 @@ nav div {
     margin-left: 10px;
     margin-right: 10px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .copyright {
     text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 992px) {
+
+    .main-left,
+    .gallery,
+    .feature,
+    .recent-product {
+        width: 100%;
+    }
+
+    .pictures,
+    .store-features,
+    .recent-products-container {
+        flex-direction: column;
+    }
+
+    .bottom-gallery-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        padding: 0px;
+    }
+
+    .social-media-info {
+        grid-column: 1/3;
+    }
 }
