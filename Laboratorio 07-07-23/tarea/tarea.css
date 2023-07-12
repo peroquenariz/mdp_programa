@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.container div, .header {
+    height: 200px;
+    background-color: brown;
+    border: 3px solid gray;
+}
+
+.header {
+    width: 100%;
+}
+
+.main {
+    width: 60%;
+}
+
+.aside {
+    width: 40%;
+}
+
+button {
+    height: 100px;
+    width: 400px;
+    font-size: 40px;
+}
